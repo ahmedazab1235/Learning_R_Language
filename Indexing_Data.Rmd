@@ -1,0 +1,55 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+Auto = read.table("Auto.data")
+
+head(Auto)
+```
+```{r}
+
+Auto = read.table("Auto.data", header = T, na.strings = "?", stringsAsFactors = T)
+
+head(Auto)
+```
+shape() in python
+```{r}
+dim(Auto)
+
+```
+
+
+remove rows tha have a missing observations
+```{r}
+Auto = na.omit(Auto)
+dim(Auto)
+```
+
+
+to check the variable names ----> names(df)
+
+
+```{r}
+names(Auto)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

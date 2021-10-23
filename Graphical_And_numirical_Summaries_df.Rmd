@@ -1,0 +1,121 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+
+Auto = read.table("Auto.data", header = T, na.strings = "?", stringsAsFactors = T)
+
+head(Auto)
+
+```
+
+
+remove rows tha have a missing observations
+```{r}
+Auto = na.omit(Auto)
+dim(Auto)
+```
+
+
+to check the variable names ----> names(df)
+
+
+```{r}
+names(Auto)
+```
+
+
+we will get error
+```{r}
+plot(cylinders , mpg)
+
+```
+we should write it this way ..... 
+
+```{r}
+plot(Auto$cylinders, Auto$mpg)
+```
+
+or use attach() to make it available by name
+
+```{r}
+attach(Auto)
+plot(cylinders , mpg)
+```
+
+
+tern cylinders to qualitative variable 
+
+```{r}
+
+cylinders = as.factor(cylinders)
+```
+
+
+if qualitative variable ploted in x axis plot() will make it boxplot by automatic
+
+```{r}
+plot(cylinders , mpg)
+plot(cylinders , mpg, col="red")
+plot(cylinders , mpg, col="red", varwidth= T)
+
+
+plot(cylinders , mpg, col="red", varwidth= T, horizontal = T)
+
+
+```
+col = 2    ==    col "red"
+
+```{r}
+hist(mpg)
+
+hist(mpg, col=2)
+
+
+hist(mpg, col=2, breaks = 15)
+
+```
+```{r}
+plot(horsepower, mpg)
+
+identify(horsepower, mpg, name)
+
+```
+
+
+```{r}
+summary(Auto)
+```
+
+also e can do it for one feature 
+```{r}
+summary(mpg)
+```
+
+
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
