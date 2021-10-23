@@ -1,0 +1,52 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+scatter plot
+```{r}
+x = rnorm(100)
+
+y = rnorm(100)
+
+plot(x,y)
+
+plot(x,y, xlab="this the X axis", ylab="this is the y axis", main="Ahmed Azab")
+```
+save graph of plot in pdf using pdf() or as jpeg by jpeg()
+
+dev.off()   indicates to r that we are done creating the plot
+```{r}
+jpeg("Figure.jpeg")
+plot(x,y, col='green')
+dev.off()
+```
+seq like inrange in python 
+
+
+```{r}
+x = seq(1,10)
+
+x
+```
+shorthand   seq()
+```{r}
+x = 1:10
+
+x
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

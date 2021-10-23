@@ -1,0 +1,56 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+
+x = matrix(c(1, 2, 3, 4), 2, 2)
+x = x^2.5
+sqrt(x)
+```
+Here I use rnorm to generates a vector of random normal variables and get the correlation between x and y
+
+```{r}
+x = rnorm(50)
+
+y = x + rnorm(50,50,.1)
+
+cor(x,y)
+```
+useing the same random variables
+```{r}
+set.seed(1303)
+
+rnorm(50)
+```
+```{r}
+set.seed(1303)
+
+rnorm(50)
+```
+
+```{r}
+rnorm(50)
+```
+
+use mean and var and sd
+
+```{r}
+y = rnorm(100)
+
+mean(y)
+
+var(y)
+
+sqrt(var(y))
+
+sd(y)
+
+```
+
+
+
+
+
+
